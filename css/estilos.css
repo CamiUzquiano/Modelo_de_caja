@@ -1,3 +1,71 @@
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;/*esta poniendo los valores de la caja*/
+}/*esto es un selector cuando usamos el "*" esta diciendo que a todos los elementos se aplique este estilo*/
+body, div, h2, p{
+    margin: 0; 
+    padding: 0;
+}/*en cambio este selector es de etiqueta y lo que dice es que con la coma se va a aplicar este estilo a todos los emncionados*/
+div a{
+    margin: 0; 
+    padding: 0;
+}/*en cambio este selector de etiqueta esta anidando es diferente que el anterior porque dice que el estilo se aplique a los "a", hipervinculos mientras este dentro de un div*/
+
 body{
-    background-color: hotpink;
+    background-color: cadetblue;
+} /*en los selectores sobre el margen va a priorizar este porque CSS interpreta y hace caso al más específico, entonces el que era "*" ya no va a funcionar*/
+
+/*SELECTOR DE CLASE, SE LO LLAMA CON "." */
+.caja{
+    background-color: white;
+    width: 600px; /*esto no esta interpretando a la caja sino al contenido*/
+    height: auto;
+    /*margin: 10px 20px 30px 40px; estos valores se interpretan en el orden de las manesillas del reloj, es el borde externo*/
+    margin: 40px auto; /*de esta forma se centra elementos en CSS*/
+    padding: 40px; /*este es el borde interno*/
+    border-bottom: 10px solid blueviolet; /*para poner un borde interno primero se pone el tamaño del borde, el tipo de borde y finalmente el color*/
+    border-top: 10px solid blueviolet;
+    border-left: 10px solid greenyellow;
+    border-right: 10px solid greenyellow;
+    border-radius: 20px; /*habla de cuanto se va a bordear las esquinas*/
+    border-top-right-radius: 80px;
+    outline: 20px solid magenta; /*este borde es externo no como el anterior*/
+}
+
+div.caja h2{
+    margin-bottom: 40px;
+}
+
+div.caja p{
+    margin-bottom: 20px;
+}
+
+div.caja a{
+    display: block; /*con display podemos hacer que el elemento de linea funcione como elemento de bloque entonces width y margin ahora si funcionan*/
+    /*width no funciona en elementos de linea*/
+    width: 100%; /*esto ya es un elemento predeterminado pero lo pongo para saber que width no funciona en elemento de linea*/
+    color:white;
+    background-color: blue;
+    padding: 20px 40px;
+    border-radius: 10px;
+    /*margin no funciona en elementos de linea*/
+    margin: 0 auto;
+    text-align: center; /*esta alineando al centro la tipografia*/
+    font-family: sans-serif; /*la compu va a buscar una tipografia sans-derif predeterminada*/
+    font-weight: bold; /*dirá el peso de la tipografía en este caso bold*/
+    font-size: 16px; /*delimita el tamaño de la tipografia*/
+    text-decoration: none; /*con esto quitamos en subrayado del hipervinculo*/
+    text-transform: uppercase; /*configura que ya no sea minúsculas ahora serán mayúsculas*/
+    transition: 1s; /*aqui basicamente esta animando en cuanto aparece el cambio, en este caso es 1 segundo*/
+}
+
+.caja a:hover{
+    background: darkorange; /*en este caso cuando el mouse este encima del elemento cambiara el color de fondo*/
+    box-shadow: 0 0 10px rgba(0,0,0.6); /*para delimitar una sombra primero de pone el desplazamiento X, luego Y, luego el desenfoque y finalmente el color de la sombra en este caso estamos pponiendo el valor sexagecimal y el desenfoque de la sombra*/
+}/*la a:pseudo, en este caso pseudo es hover y hover es cuando el mouse este encima del elemento cambie*/
+
+/*SELECTOR DE IDENTIDAD, SE LO LLAMA CON "#" */
+#descripcion{
+
 }
