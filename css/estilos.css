@@ -65,7 +65,7 @@ div.caja a{
     box-shadow: 0 0 10px rgba(0,0,0.6); /*para delimitar una sombra primero de pone el desplazamiento X, luego Y, luego el desenfoque y finalmente el color de la sombra en este caso estamos pponiendo el valor sexagecimal y el desenfoque de la sombra*/
 }/*la a:pseudo, en este caso pseudo es hover y hover es cuando el mouse este encima del elemento cambie*/
 
-/*SELECTOR DE IDENTIDAD, SE LO LLAMA CON "#" */
+/*SELECTOR DE IDENTIDAD, SE LO LLAMA CON "#"
 #descripcion{
 
-}
+}*/
